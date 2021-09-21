@@ -2,7 +2,6 @@
   <head>
     <meta charset="UTF-8" />
     <title>Parallax Website using simpleparallax js</title>
-    <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
   <body>
@@ -31,8 +30,8 @@
         alt=""
         class="parallaximg1"
       />
+      <h2>Left</h2>
     </div>
-    <h2>Left</h2>
     <section>
       <p>
         Interdum velit euismod in pellentesque massa placerat duis. In arcu
@@ -52,8 +51,9 @@
         alt=""
         class="parallaximg2"
       />
+      <h2>Right</h2>
     </div>
-    <h2>Right</h2>
+
     <section>
       <p>
         Tellus elementum sagittis vitae et leo duis ut. Morbi quis commodo odio
@@ -72,8 +72,8 @@
         alt=""
         class="parallaximg3"
       />
+      <h2>Up</h2>
     </div>
-    <h2>Up</h2>
     <section>
       <p>
         Sed turpis tincidunt id aliquet risus. Enim ut tellus elementum sagittis
@@ -95,8 +95,8 @@
         alt=""
         class="parallaximg4"
       />
+      <h2>Down</h2>
     </div>
-    <h2>Down</h2>
     <section>
       <p>
         Accumsan sit amet nulla facilisi morbi tempus iaculis. Laoreet id donec
@@ -113,5 +113,28 @@
         Etiam non quam lacus suspendisse faucibus interdum posuere.
       </p>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
+    <script>
+      var image1 = document.getElementsByClassName('parallaximg1');
+      var image2 = document.getElementsByClassName('parallaximg2');
+      var image3 = document.getElementsByClassName('parallaximg3');
+      var image4 = document.getElementsByClassName('parallaximg4');
+
+      new simpleParallax(image1, {
+        orientation: 'left',
+      });
+
+      new simpleParallax(image2, {
+        orientation: 'right ',
+      });
+
+      new simpleParallax(image3, {
+        orientation: 'up',
+      });
+
+      new simpleParallax(image4, {
+        orientation: 'down',
+      });
+    </script>
   </body>
 </html>
